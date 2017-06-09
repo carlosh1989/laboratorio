@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.4.1deb2ubuntu2
+-- version 4.2.12deb2+deb8u1
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 08-06-2017 a las 23:22:37
--- Versión del servidor: 5.7.17-0ubuntu0.16.04.1
--- Versión de PHP: 7.0.15-0ubuntu0.16.04.4
+-- Tiempo de generación: 09-06-2017 a las 15:17:21
+-- Versión del servidor: 5.5.49-0+deb8u1
+-- Versión de PHP: 5.6.27-0+deb8u1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Base de datos: `laboratorio`
@@ -23,18 +23,25 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `hematologia`
+-- Estructura de tabla para la tabla `hematologias`
 --
 
-CREATE TABLE `hematologia` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `hematologias` (
+`id` int(11) NOT NULL,
   `id_solicitud` int(11) NOT NULL,
   `hematocritos` varchar(50) NOT NULL,
   `hemoglobina` varchar(50) NOT NULL,
   `leucocitos` varchar(50) NOT NULL,
   `neutrofilos` varchar(50) NOT NULL,
   `linfocitos` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `hematologias`
+--
+
+INSERT INTO `hematologias` (`id`, `id_solicitud`, `hematocritos`, `hemoglobina`, `leucocitos`, `neutrofilos`, `linfocitos`) VALUES
+(1, 3, 'asdasfsd', 'sdfsdf', '', 'sdfsd', 'sdfsdfs');
 
 -- --------------------------------------------------------
 
@@ -42,8 +49,8 @@ CREATE TABLE `hematologia` (
 -- Estructura de tabla para la tabla `pacientes`
 --
 
-CREATE TABLE `pacientes` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `pacientes` (
+`id` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL,
   `apellido` varchar(50) NOT NULL,
   `cedula` varchar(8) NOT NULL,
@@ -51,14 +58,15 @@ CREATE TABLE `pacientes` (
   `direccion` text NOT NULL,
   `telefono` varchar(11) NOT NULL,
   `sexo` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `pacientes`
 --
 
 INSERT INTO `pacientes` (`id`, `nombre`, `apellido`, `cedula`, `fecha_nacimiento`, `direccion`, `telefono`, `sexo`) VALUES
-(1, 'carlos', 'silva', '19881315', '30/05/1989', 'lorem ipsum', '04127624857', 'masculino');
+(1, 'carlos', 'silva', '19881315', '30/05/1989', 'lorem ipsum', '04127624857', 'masculino'),
+(2, 'asdasd', 'asdasdas', '15561516', '30/05/1989', 'lorem ipsum', '04124565656', 'M');
 
 -- --------------------------------------------------------
 
@@ -66,8 +74,8 @@ INSERT INTO `pacientes` (`id`, `nombre`, `apellido`, `cedula`, `fecha_nacimiento
 -- Estructura de tabla para la tabla `parroquias`
 --
 
-CREATE TABLE `parroquias` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `parroquias` (
+`id` int(11) NOT NULL,
   `id_municipio` int(11) NOT NULL,
   `nombre` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=ascii;
@@ -78,19 +86,21 @@ CREATE TABLE `parroquias` (
 -- Estructura de tabla para la tabla `solicitudes`
 --
 
-CREATE TABLE `solicitudes` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `solicitudes` (
+`id` int(11) NOT NULL,
   `id_paciente` int(11) NOT NULL,
   `fecha` varchar(50) NOT NULL,
-  `observaciones` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `observaciones` text NOT NULL,
+  `hematologia` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `solicitudes`
 --
 
-INSERT INTO `solicitudes` (`id`, `id_paciente`, `fecha`, `observaciones`) VALUES
-(1, 1, '30/05/2017', 'ninguna');
+INSERT INTO `solicitudes` (`id`, `id_paciente`, `fecha`, `observaciones`, `hematologia`) VALUES
+(3, 2, '09/06/2017', 'lorem ipsum', 'a:4:{i:0;s:11:"hematocrito";i:1;s:11:"hemoglobina";i:2;s:11:"neutrofilos";i:3;s:10:"linfocitos";}'),
+(4, 2, '09/06/2017', 'segunda solicitud', 'a:4:{i:0;s:11:"hematocrito";i:1;s:11:"hemoglobina";i:2;s:11:"neutrofilos";i:3;s:10:"linfocitos";}');
 
 -- --------------------------------------------------------
 
@@ -98,12 +108,12 @@ INSERT INTO `solicitudes` (`id`, `id_paciente`, `fecha`, `observaciones`) VALUES
 -- Estructura de tabla para la tabla `tabla_municipio`
 --
 
-CREATE TABLE `tabla_municipio` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tabla_municipio` (
+`id` int(11) NOT NULL,
   `municipio` varchar(250) NOT NULL,
   `poblacion` int(11) NOT NULL,
   `abrebiar` varchar(20) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tabla_municipio`
@@ -129,12 +139,12 @@ INSERT INTO `tabla_municipio` (`id`, `municipio`, `poblacion`, `abrebiar`) VALUE
 -- Estructura de tabla para la tabla `tabla_parroquia`
 --
 
-CREATE TABLE `tabla_parroquia` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tabla_parroquia` (
+`id` int(11) NOT NULL,
   `parroquia` varchar(250) COLLATE latin1_general_ci NOT NULL,
   `id_municipio` int(11) NOT NULL,
   `poblacion` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
 -- Volcado de datos para la tabla `tabla_parroquia`
@@ -200,15 +210,15 @@ INSERT INTO `tabla_parroquia` (`id`, `parroquia`, `id_municipio`, `poblacion`) V
 -- Estructura de tabla para la tabla `usuario`
 --
 
-CREATE TABLE `usuario` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `usuario` (
+`id` int(11) NOT NULL,
   `usuario` varchar(25) NOT NULL,
   `password` varchar(250) NOT NULL,
   `nombre` varchar(25) NOT NULL,
   `apellido` varchar(25) NOT NULL,
   `cargo` varchar(25) NOT NULL,
   `rol` varchar(25) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=ascii;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=ascii;
 
 --
 -- Volcado de datos para la tabla `usuario`
@@ -223,88 +233,86 @@ INSERT INTO `usuario` (`id`, `usuario`, `password`, `nombre`, `apellido`, `cargo
 --
 
 --
--- Indices de la tabla `hematologia`
+-- Indices de la tabla `hematologias`
 --
-ALTER TABLE `hematologia`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `hematologias`
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `pacientes`
 --
 ALTER TABLE `pacientes`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `parroquias`
 --
 ALTER TABLE `parroquias`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `solicitudes`
 --
 ALTER TABLE `solicitudes`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `tabla_municipio`
 --
 ALTER TABLE `tabla_municipio`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_municipio` (`id`,`municipio`,`poblacion`,`abrebiar`);
+ ADD PRIMARY KEY (`id`), ADD KEY `id_municipio` (`id`,`municipio`,`poblacion`,`abrebiar`);
 
 --
 -- Indices de la tabla `tabla_parroquia`
 --
 ALTER TABLE `tabla_parroquia`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_parrouia` (`id`,`parroquia`,`id_municipio`,`poblacion`);
+ ADD PRIMARY KEY (`id`), ADD KEY `id_parrouia` (`id`,`parroquia`,`id_municipio`,`poblacion`);
 
 --
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT de la tabla `hematologia`
+-- AUTO_INCREMENT de la tabla `hematologias`
 --
-ALTER TABLE `hematologia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `hematologias`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `pacientes`
 --
 ALTER TABLE `pacientes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `parroquias`
 --
 ALTER TABLE `parroquias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `solicitudes`
 --
 ALTER TABLE `solicitudes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `tabla_municipio`
 --
 ALTER TABLE `tabla_municipio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT de la tabla `tabla_parroquia`
 --
 ALTER TABLE `tabla_parroquia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=53;
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

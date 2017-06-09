@@ -43,7 +43,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Pensiones</a>
+                <a class="navbar-brand" href="#">
+                <img style="width: 47px;" id="profile-img" class="profile-img-card" src="https://is3-ssl.mzstatic.com/image/thumb/Purple49/v4/20/ea/39/20ea392b-cbb8-3685-f17d-9c87403d3ba9/source/256x256bb.jpg" />Laboratorio</a>
               </div>
               <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -54,7 +55,12 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                   <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $usuario_current->usuario ?> <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <?php if ($usuario_current): ?>
+                                          <?php echo $usuario_current->usuario ?> 
+                    <?php endif ?>
+
+                    <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                       <li><a class="fa fa-sign-out" href="<?php echo baseUrl ?>login/principal/logout">Salir</a></li>
                     </ul>
@@ -65,7 +71,7 @@
             </nav>
           </div>
           <div class="col-sm-9 col-lg-10">
-          <br>
+            <br>
             <?php echo $content ?>
           </div>
         </div>

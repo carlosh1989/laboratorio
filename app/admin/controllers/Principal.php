@@ -15,6 +15,6 @@ class Principal extends Controller
 
     public function index()
     {
-		Redirect::to('admin/pensionados');
+		Redirect::to('admin/pacientes');
     }
 }

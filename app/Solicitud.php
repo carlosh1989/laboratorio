@@ -1,5 +1,6 @@
 <?php 
 namespace App;
+use App\Hematologia;
 use App\Paciente;
 use \Illuminate\Database\Eloquent\Model;
  
@@ -11,7 +12,12 @@ class Solicitud extends Model {
 
 	public function paciente()
 	{
-		return $this->belongsTo(Paciente::class, 'id','id_paciente');
+		return $this->belongsTo(Paciente::class, 'id_paciente','id');
+	}
+
+	public function hematologia_resultados()
+	{
+		return $this->hasOne(Hematologia::class, 'id_solicitud','id');
 	}
 }
 

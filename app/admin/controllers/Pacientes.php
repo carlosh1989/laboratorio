@@ -2,8 +2,9 @@
 namespace App\admin\controllers;
 
 use App\Paciente;
-use App\admin\repositories\PacientesRepository;
+use App\admin\repositories\PacientesRepository as Repo;
 use Controller,View,Token,Session,Arr,Message,Redirect;
+use System\tools\method\Data;
 
 class Pacientes extends Controller
 {
@@ -28,13 +29,23 @@ class Pacientes extends Controller
     // localhost/proyecto/modulo/principal/
     public function store()
     {
-        //Guardar datos enviados de -create-
+        $registro = Repo::ingresar($_POST);
+
+        if (is_numeric($registro)) 
+        {
+            Redirect::send('admin/pacientes/'.$registro,'success', 'El paciente se agrego exitosamente.');
+        } 
+        else 
+        {
+            Redirect::send('admin/pensionados/create','error', $registro);
+        }
     }
 
     // localhost/proyecto/modulo/principal/ID
     public function show($id)
     {
-        View::show('show', compact('id'));
+        $paciente = Paciente::find($id);
+        View::show('show', compact('paciente','id'));
     }
 
     // localhost/proyecto/modulo/principal/ID/edit

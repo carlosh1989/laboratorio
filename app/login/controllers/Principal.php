@@ -63,7 +63,7 @@ class Principal extends Controller
 	           	$session->register(120); // Register for 2 hours.
 	            $session->set('current_user', $user);
 	            //header('location: '.baseUrl.'admin/pensionados');
-	            Redirect::send('admin/pensionados','success','Bienvenido al sistema');
+	            Redirect::to('login/principal/index');
 			}
 			else
 			{

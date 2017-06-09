@@ -19,12 +19,6 @@
         </div>
       </div>
     </form>
-      <br>
-      <div class="row">
-        <div class="col-lg-12">
-          <h5>SOLICITUDES </h5>
-        </div>
-      </div>
       <hr>
     <table class="table table-striped table-condensed table-responsive" data-striped="true">
       <thead>
@@ -50,9 +44,9 @@
                <span class="caret"></span>
               </button>
               <ul class="dropdown-menu">
-                <li><a href="<?php echo $baseUrl ?>admin/pensionados/<?php echo $p->id ?>"> <pre class="text-primary">VER DATOS <i class="fa fa-search"></i></pre></a></li>
-                <li> <a href="<?php echo $baseUrl ?>admin/pensionados/<?php echo $p->id ?>/edit"> <pre class="text-success">EDITAR <i class="fa fa-pencil"></i></pre></a></li></a></li>
-                <li><a href="<?php echo $baseUrl ?>admin/pensionados/<?php echo $p->id ?>/delete"><pre class="text-danger">ELIMINAR <i class="fa fa-times"></i></pre></a></li>
+                <li><a href="<?php echo $baseUrl ?>admin/pensionados/<?php echo $p->id ?>"> <b class="text-primary">VER DATOS <i class="fa fa-search"></i></b></a></li>
+                <li> <a href="<?php echo $baseUrl ?>admin/pensionados/<?php echo $p->id ?>/edit"> <b class="text-success">EDITAR <i class="fa fa-pencil"></i></b></a></li></a></li>
+                <li><a href="<?php echo $baseUrl ?>admin/pensionados/<?php echo $p->id ?>/delete"><b class="text-danger">ELIMINAR <i class="fa fa-times"></i></b></a></li>
               </ul>
             </div>
           </td>
@@ -60,6 +54,5 @@
         <?php endforeach ?>
       </tbody>
     </table>
-
   </div>
 </div>

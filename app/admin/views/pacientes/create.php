@@ -3,7 +3,7 @@
     <h3 class="panel-title text-muted">INGRESAR PACIENTE</h3>
   </div>
   <div class="panel-body">
-    <form action="<?php echo baseUrl ?>admin/pensionados" method="POST">
+    <form action="<?php echo baseUrl ?>admin/pacientes" method="POST">
       <?php echo Token::field() ?>
       <div class="row">
         <div class="col-lg-4">

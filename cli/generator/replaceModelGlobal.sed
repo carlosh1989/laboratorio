@@ -1,3 +1,3 @@
 
-s/${model}/Solicitud/
-s/${tabla}/solicitudes/
+s/${model}/Hematologia/
+s/${tabla}/hematologias/
