@@ -1,0 +1,16 @@
+{
+    "name": "railto/flash-messages",
+    "description": "Simple flash messages for PHP using bootstrap 3 alerts",
+    "keywords": ["flash messages", "flash", "messages"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mark Railton",
+            "email": "marksrailton@gmail.com",
+            "homepage": "http://railto.io"
+        }
+    ],
+    "autoload": {
+        "files": ["src/flash_messages.php"]
+    }
+}
