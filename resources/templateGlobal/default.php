@@ -24,13 +24,33 @@
     .fixed-table-container {
     border:0px !important;
     }
-    </style>
+
+
+input[type="button"] {
+  transition: all .3s;
+    border: 1px solid #ddd;
+    padding: 3px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+  font-size: 15px;
+}
+
+input[type="button"]:not(.active) {
+  background-color:transparent;
+}
+
+.active {
+  background-color: #299BFF;
+  color :#fff;
+}
+
+input[type="button"]:hover:not(.active) {
+  background-color: #ddd;
+}
+
+</style>
   </head>
   <body>
-    <?php
-    use System\tools\session\Session;
-    $usuario_current = (object) Session::get('current_user');
-    ?>
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-3 col-lg-2">
@@ -48,18 +68,13 @@
               </div>
               <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="<?php echo baseUrl ?>">Home</a></li>
-                  <li><a href="<?php echo baseUrl ?>admin/pensionados">Pensionados</a></li>
-                  <li><a href="<?php echo baseUrl ?>admin/autorizados">Autorizados</a></li>
-                  <li><a href="<?php echo baseUrl ?>admin/usuarios">Usuarios</a></li>
+                  <li class="active"><a href="<?php echo baseUrl ?>">HOME</a></li>
+                  <li><a href="<?php echo baseUrl ?>admin/pacientes">PACIENTES</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                   <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    <?php if ($usuario_current): ?>
-                                          <?php echo $usuario_current->usuario ?> 
-                    <?php endif ?>
-
+                    <a class="fa fa-cog" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    
                     <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                       <li><a class="fa fa-sign-out" href="<?php echo baseUrl ?>login/principal/logout">Salir</a></li>
@@ -84,5 +99,72 @@
       <script src="<?php echo baseUrl ?>assets/bower/jquery/dist/jquery.slim.min.js"></script>
       <script src="<?php echo baseUrl ?>assets/bower/AdminLTE/bootstrap/js/bootstrap.min.js"></script>
       <script src="<?php echo baseUrl ?>assets/bower/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
+      <script type="text/javascript">
+
+// get the table element
+var $table = document.getElementById("tablePagination"),
+// number of rows per page
+$n = 5,
+// number of rows of the table
+$rowCount = $table.rows.length,
+// get the first cell's tag name (in the first row)
+$firstRow = $table.rows[0].firstElementChild.tagName,
+// boolean var to check if table has a head row
+$hasHead = ($firstRow === "TH"),
+// an array to hold each row
+$tr = [],
+// loop counters, to start count from rows[1] (2nd row) if the first row has a head tag
+$i,$ii,$j = ($hasHead)?1:0,
+// holds the first row if it has a (<TH>) & nothing if (<TD>)
+$th = ($hasHead?$table.rows[(0)].outerHTML:"");
+// count the number of pages
+var $pageCount = Math.ceil($rowCount / $n);
+// if we had one page only, then we have nothing to do ..
+if ($pageCount > 1) {
+  // assign each row outHTML (tag name & innerHTML) to the array
+  for ($i = $j,$ii = 0; $i < $rowCount; $i++, $ii++)
+    $tr[$ii] = $table.rows[$i].outerHTML;
+  // create a div block to hold the buttons
+  $table.insertAdjacentHTML("afterend","<div id='buttons'></div");
+  // the first sort, default page is the first one
+  sort(1);
+}
+
+// ($p) is the selected page number. it will be generated when a user clicks a button
+function sort($p) {
+  /* create ($rows) a variable to hold the group of rows
+  ** to be displayed on the selected page,
+  ** ($s) the start point .. the first row in each page, Do The Math
+  */
+  var $rows = $th,$s = (($n * $p)-$n);
+  for ($i = $s; $i < ($s+$n) && $i < $tr.length; $i++)
+    $rows += $tr[$i];
+  
+  // now the table has a processed group of rows ..
+  $table.innerHTML = $rows;
+  // create the pagination buttons
+  document.getElementById("buttons").innerHTML = pageButtons($pageCount,$p);
+  // CSS Stuff
+  document.getElementById("id"+$p).setAttribute("class","active");
+}
+
+
+// ($pCount) : number of pages,($cur) : current page, the selected one ..
+function pageButtons($pCount,$cur) {
+  /* this variables will disable the "Prev" button on 1st page
+     and "next" button on the last one */
+  var $prevDis = ($cur == 1)?"disabled":"",
+    $nextDis = ($cur == $pCount)?"disabled":"",
+    /* this ($buttons) will hold every single button needed
+    ** it will creates each button and sets the onclick attribute
+    ** to the "sort" function with a special ($p) number..
+    */
+    $buttons = "<input type='button' value='&lt;&lt; Prev' onclick='sort("+($cur - 1)+")' "+$prevDis+">";
+  for ($i=1; $i<=$pCount;$i++)
+    $buttons += "<input type='button' id='id"+$i+"'value='"+$i+"' onclick='sort("+$i+")'>";
+  $buttons += "<input type='button' value='Next &gt;&gt;' onclick='sort("+($cur + 1)+")' "+$nextDis+">";
+  return $buttons;
+}
+</script>
     </body>
   </html>

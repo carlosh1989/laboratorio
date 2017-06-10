@@ -8,9 +8,10 @@
       <div class="row">
         <div class="col-lg-4">
           <div class="form-group">
-            <input class="form-control" type="text" name="nombre" placeholder="Ingrese Nombre" required>
+            <input class="form-control" type="number" name="cedula" placeholder="Ingrese Cedula" value="<?php echo $cedula ?>" required>
           </div>
         </div>
+
         <div class="col-lg-4">
           <div class="form-group">
             <input class="form-control" type="text" name="apellido" placeholder="Ingrese Apellido" required>
@@ -18,7 +19,7 @@
         </div>
         <div class="col-lg-4">
           <div class="form-group">
-            <input class="form-control" type="number" name="cedula" placeholder="Ingrese Cedula" required>
+            <input class="form-control" type="text" name="nombre" placeholder="Ingrese Nombre" required>
           </div>
         </div>
       </div>

@@ -23,7 +23,8 @@ class Pacientes extends Controller
     // localhost/proyecto/modulo/principal/create
     public function create()
     {
-        View::show('create');
+        extract($_GET);
+        View::show('create',compact('cedula'));
     }
 
     // localhost/proyecto/modulo/principal/

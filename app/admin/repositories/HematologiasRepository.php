@@ -20,6 +20,7 @@ class HematologiasRepository
     	$hematologia->hemoglobina = $hemoglobina;
     	$hematologia->neutrofilos = $neutrofilos;
     	$hematologia->linfocitos = $linfocitos;
+        $hematologia->leucocitos = $leucocitos;
     	$hematologia->save();
 
     	if ($hematologia->id) 

@@ -19,16 +19,17 @@
     <br>
     <?php if ($solicitud->hematologia_resultados): ?>
     <div class="row">
-      <div class="col-lg-3">
+      <div class="col-lg-4">
         <a class="btn btn-default btn-block" href="#">
           <i class="fa fa-check"></i> HEMATOLOGIA
         </a>
         <br>
         <ul>
           <li>Hematocritos: <?php echo $solicitud->hematologia_resultados->hematocritos ?></li>
-          <li>Hemoglobina: <?php echo $solicitud->hematologia_resultados->hematocritos ?></li>
-          <li>Leucocitos: <?php echo $solicitud->hematologia_resultados->hematocritos ?></li>
-          <li>Neutrofilos: <?php echo $solicitud->hematologia_resultados->hematocritos ?></li>
+          <li>Hemoglobina: <?php echo $solicitud->hematologia_resultados->hemoglobina ?></li>
+          <li>Leucocitos: <?php echo $solicitud->hematologia_resultados->leucocitos ?></li>
+          <li>Linfocitos: <?php echo $solicitud->hematologia_resultados->linfocitos ?></li>
+          <li>Neutrofilos: <?php echo $solicitud->hematologia_resultados->neutrofilos ?></li>
         </ul>
       </div>
     </div>

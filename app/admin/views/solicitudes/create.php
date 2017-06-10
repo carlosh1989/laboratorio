@@ -1,6 +1,6 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title text-muted">INGRESAR PACIENTE</h3>
+    <h3 class="panel-title text-muted">INGRESAR SOLICITUD</h3>
   </div>
   <div class="panel-body">
     <form action="<?php echo baseUrl ?>admin/solicitudes" method="POST">

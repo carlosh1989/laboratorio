@@ -10,19 +10,19 @@
       </div>
       <div class="col-lg-3 dl-horizontal">
         <dt>Cedula:</dt>
-        <dd><?php echo $paciente->nacionalidad ?>-<?php echo $paciente->cedula ?> </dd>
+        <dd>C.I.<?php echo $paciente->cedula ?> </dd>
       </div>
       <div class="col-lg-3 dl-horizontal">
         <dt>Telefono:</dt>
         <dd><?php echo $paciente->telefono ?> </dd>
       </div>
+    </div>
+    <br>
+    <div class="row">
       <div class="col-lg-3 dl-horizontal">
         <dt>Fecha nacimiento:</dt>
         <dd><?php echo $paciente->fecha_nacimiento ?> </dd>
       </div>
-    </div>
-    <br>
-    <div class="row">
       <div class="col-lg-3 dl-horizontal">
         <dt>Edad:</dt>
         <dd>
@@ -33,10 +33,8 @@
       <div class="col-lg-3 dl-horizontal">
         <dt>Sexo:</dt>
         <dd><?php echo $paciente->sexo ?> </dd>
-      </div>  
-
+      </div>
     </div>
-
     <hr>
     <?php if ($paciente->id_autorizado): ?>
     <a class="btn btn-info" href="<?php echo $baseUrl ?>admin/autorizados/<?php echo $paciente->autorizado->id ?>"><i class="fa fa-search"></i> Ver autorizado</a>
@@ -45,4 +43,3 @@
     <?php endif ?>
   </div>
 </div>
-

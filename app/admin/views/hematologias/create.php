@@ -1,6 +1,6 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title text-muted">INGRESAR PACIENTE</h3>
+    <h3 class="panel-title text-muted">INGRESAR HEMATOLOGIA</h3>
   </div>
   <div class="panel-body">
     <form action="<?php echo baseUrl ?>admin/hematologias" method="POST">
@@ -15,6 +15,11 @@
         <div class="col-lg-4">
           <div class="form-group">
             <input class="form-control" type="text" name="hemoglobina" placeholder="hemoglobina" required>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="form-group">
+            <input class="form-control" type="text" name="leucocitos" placeholder="leucocitos" required>
           </div>
         </div>
         <div class="col-lg-4">
