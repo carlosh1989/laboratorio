@@ -4,13 +4,14 @@ namespace App\admin\controllers;
 use App\Paciente;
 use App\admin\repositories\PacientesRepository as Repo;
 use Controller,View,Token,Session,Arr,Message,Redirect;
-use System\tools\method\Data;
+use System\tools\security\Permission;
 
 class Pacientes extends Controller
 {
     function __construct()
     {
         parent::__construct();
+        Permission::withRole('admin');
     }
 
     // localhost/proyecto/modulo/principal

@@ -37,7 +37,6 @@ return array(
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'Phinx\\' => array($vendorDir . '/robmorgan/phinx/src/Phinx'),
-    'Philo\\Blade\\' => array($vendorDir . '/philo/laravel-blade/src'),
     'Particle\\Validator\\' => array($vendorDir . '/particle/validator/src'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
     'Migrations\\' => array($baseDir . '/migrations'),

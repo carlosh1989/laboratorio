@@ -19,26 +19,30 @@ class Principal extends Controller
 	    if ($session->isRegistered()) {
 	        // Check to see if the session has expired.
 	        // If it has, end the session and redirect to login.
-	        if ($session->isExpired()) {
+            $usuario = (object) Session::get('current_user');
+            $url = $usuario->rol.'/principal';
+            Redirect::to($url);
+            
+	        if($session->isExpired()) 
+	        {
 	            $session->end();
-	        	Redirect::to('login/principal/login');
-	        } else {
+	        	View::ver('login/principal/login');
+	        } 
+	        else 
+	        {
 	            // Keep renewing the session as long as they keep taking action.
 	            $session->renew();
 	            $usuario = (object) Session::get('current_user');
 	            $url = $usuario->rol.'/principal';
 	            Redirect::to($url);
 	        }
-	    } else {
-	        Redirect::to('login/principal/login');
+	    } 
+	    else 
+	    {
+	        View::ver('login/principal/login');
 	    }
     }
     
-    public function login()
-    { 
-    	View::ver('login/principal/login');
-    }
-
     public function verificar()
     {
 		extract($_POST);
@@ -74,8 +78,7 @@ class Principal extends Controller
 		{
             Redirect::send('login/principal','error','Usuario incorrecto.');
 		}
-
-		Arr::show($usuario);
+		//Arr::show($usuario);
     }
 
     public function clave()

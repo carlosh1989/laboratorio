@@ -13,6 +13,5 @@ class Paciente extends Model {
 	{
 		return $this->hasMany(Solicitud::class, 'id_paciente','id');
 	}
-
 }
 
