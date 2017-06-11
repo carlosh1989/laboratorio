@@ -10,6 +10,7 @@ return array (
     'message' => 'System\\tools\\session\\Message',
     'arr' => 'System\\tools\\render\\Arr',
     'redirect' => 'System\\tools\\rounting\\Redirect',
+    'permission' => 'System\\tools\\security\\Permission',
   ),
   'classNameToAliasMapping' => 
   array (
@@ -44,6 +45,10 @@ return array (
     'System\\tools\\rounting\\Redirect' => 
     array (
       'redirect' => 'redirect',
+    ),
+    'System\\tools\\security\\Permission' => 
+    array (
+      'permission' => 'permission',
     ),
   ),
 );

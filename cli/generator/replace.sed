@@ -1,4 +1,4 @@
 
 s/${modulo}/admin/
-s/${controller}/Hematologias/
+s/${controller}/Sanguineas/
 s/${vista}/show/

@@ -3,8 +3,7 @@ namespace App\admin\controllers;
 
 use App\Paciente;
 use App\admin\repositories\PacientesRepository as Repo;
-use Controller,View,Token,Session,Arr,Message,Redirect;
-use System\tools\security\Permission;
+use Controller,View,Token,Session,Arr,Message,Redirect,Permission;
 
 class Pacientes extends Controller
 {
