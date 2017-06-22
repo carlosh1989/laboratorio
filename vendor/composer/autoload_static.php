@@ -344,10 +344,6 @@ class ComposerStaticInit6d93b40cda7199a2ff103bd00e400aaa
             array (
                 0 => __DIR__ . '/..' . '/pimple/pimple/lib',
             ),
-            'Phroute' => 
-            array (
-                0 => __DIR__ . '/..' . '/phroute/phroute/src',
-            ),
             'PhpOption\\' => 
             array (
                 0 => __DIR__ . '/..' . '/phpoption/phpoption/src',
@@ -434,11 +430,13 @@ class ComposerStaticInit6d93b40cda7199a2ff103bd00e400aaa
         'App\\admin\\controllers\\Pacientes' => __DIR__ . '/../..' . '/app/admin/controllers/Pacientes.php',
         'App\\admin\\controllers\\Partidas' => __DIR__ . '/../..' . '/app/admin/controllers/Partidas.php',
         'App\\admin\\controllers\\Principal' => __DIR__ . '/../..' . '/app/admin/controllers/Principal.php',
+        'App\\admin\\controllers\\Pruebas' => __DIR__ . '/../..' . '/app/admin/controllers/Pruebas.php',
         'App\\admin\\controllers\\Solicitudes' => __DIR__ . '/../..' . '/app/admin/controllers/Solicitudes.php',
         'App\\admin\\controllers\\Usuarios' => __DIR__ . '/../..' . '/app/admin/controllers/Usuarios.php',
         'App\\admin\\repositories\\HematologiasRepository' => __DIR__ . '/../..' . '/app/admin/repositories/HematologiasRepository.php',
         'App\\admin\\repositories\\PacientesRepository' => __DIR__ . '/../..' . '/app/admin/repositories/PacientesRepository.php',
         'App\\admin\\repositories\\PartidasRepository' => __DIR__ . '/../..' . '/app/admin/repositories/PartidasRepository.php',
+        'App\\admin\\repositories\\PruebasRepository' => __DIR__ . '/../..' . '/app/admin/repositories/PruebasRepository.php',
         'App\\admin\\repositories\\SolicitudesRepository' => __DIR__ . '/../..' . '/app/admin/repositories/SolicitudesRepository.php',
         'App\\admin\\repositories\\UsuariosRepository' => __DIR__ . '/../..' . '/app/admin/repositories/UsuariosRepository.php',
         'App\\login\\controllers\\Principal' => __DIR__ . '/../..' . '/app/login/controllers/Principal.php',
@@ -1641,16 +1639,6 @@ class ComposerStaticInit6d93b40cda7199a2ff103bd00e400aaa
         'PhpOption\\None' => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption/None.php',
         'PhpOption\\Option' => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption/Option.php',
         'PhpOption\\Some' => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption/Some.php',
-        'Phroute\\Dispatcher' => __DIR__ . '/..' . '/phroute/phroute/src/Phroute/Dispatcher.php',
-        'Phroute\\Exception\\BadRouteException' => __DIR__ . '/..' . '/phroute/phroute/src/Phroute/Exception/BadRouteException.php',
-        'Phroute\\Exception\\HttpException' => __DIR__ . '/..' . '/phroute/phroute/src/Phroute/Exception/HttpException.php',
-        'Phroute\\Exception\\HttpMethodNotAllowedException' => __DIR__ . '/..' . '/phroute/phroute/src/Phroute/Exception/HttpMethodNotAllowedException.php',
-        'Phroute\\Exception\\HttpRouteNotFoundException' => __DIR__ . '/..' . '/phroute/phroute/src/Phroute/Exception/HttpRouteNotFoundException.php',
-        'Phroute\\HandlerResolver' => __DIR__ . '/..' . '/phroute/phroute/src/Phroute/HandlerResolver.php',
-        'Phroute\\HandlerResolverInterface' => __DIR__ . '/..' . '/phroute/phroute/src/Phroute/HandlerResolverInterface.php',
-        'Phroute\\Route' => __DIR__ . '/..' . '/phroute/phroute/src/Phroute/Route.php',
-        'Phroute\\RouteCollector' => __DIR__ . '/..' . '/phroute/phroute/src/Phroute/RouteCollector.php',
-        'Phroute\\RouteParser' => __DIR__ . '/..' . '/phroute/phroute/src/Phroute/RouteParser.php',
         'Pimple' => __DIR__ . '/..' . '/pimple/pimple/lib/Pimple.php',
         'Psr\\Container\\ContainerExceptionInterface' => __DIR__ . '/..' . '/psr/container/src/ContainerExceptionInterface.php',
         'Psr\\Container\\ContainerInterface' => __DIR__ . '/..' . '/psr/container/src/ContainerInterface.php',

@@ -11,7 +11,6 @@ return array(
     'Twig_' => array($vendorDir . '/twig/twig/lib'),
     'Strana' => array($vendorDir . '/usmanhalalit/strana/src'),
     'Pimple' => array($vendorDir . '/pimple/pimple/lib'),
-    'Phroute' => array($vendorDir . '/phroute/phroute/src'),
     'PhpOption\\' => array($vendorDir . '/phpoption/phpoption/src'),
     'PhpCollection' => array($vendorDir . '/phpcollection/phpcollection/src'),
     'Parsedown' => array($vendorDir . '/erusev/parsedown'),

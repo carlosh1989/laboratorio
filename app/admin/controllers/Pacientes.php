@@ -30,7 +30,7 @@ class Pacientes extends Controller
     // localhost/proyecto/modulo/principal/
     public function store()
     {
-        $registro = Repo::ingresar($_POST);
+        $registro = Repo::store($_POST);
 
         if (is_numeric($registro)) 
         {

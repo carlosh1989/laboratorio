@@ -11,7 +11,7 @@ class PacientesRepository
 		new Eloquent();
     }
 
-    public function ingresar($data)
+    public function store($data)
     {
     	$paciente = Paciente::create($data);
 
@@ -23,5 +23,20 @@ class PacientesRepository
     	{
     		return 'Error al guardar paciente.';
     	}
+    }
+
+    public function show($id)
+    {
+
+    }
+
+    public function update($id,$data)
+    {
+
+    }
+
+    public function destroy($id)
+    {
+
     }
 }
