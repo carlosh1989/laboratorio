@@ -3957,75 +3957,28 @@
         ]
     },
     {
-        "name": "illuminate/events",
-        "version": "v5.1.41",
-        "version_normalized": "5.1.41.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/illuminate/events.git",
-            "reference": "b498088237eb9f6be9725e807e8e01d2631777e9"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/events/zipball/b498088237eb9f6be9725e807e8e01d2631777e9",
-            "reference": "b498088237eb9f6be9725e807e8e01d2631777e9",
-            "shasum": ""
-        },
-        "require": {
-            "illuminate/container": "5.1.*",
-            "illuminate/contracts": "5.1.*",
-            "illuminate/support": "5.1.*",
-            "php": ">=5.5.9"
-        },
-        "time": "2015-12-30 20:19:08",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "5.1-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Illuminate\\Events\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Taylor Otwell",
-                "email": "taylorotwell@gmail.com"
-            }
-        ],
-        "description": "The Illuminate Events package.",
-        "homepage": "http://laravel.com"
-    },
-    {
         "name": "symfony/finder",
-        "version": "v2.7.29",
-        "version_normalized": "2.7.29.0",
+        "version": "v2.8.22",
+        "version_normalized": "2.8.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/finder.git",
-            "reference": "936529dea4ebedcfe577700b6079a75eb918d21f"
+            "reference": "4f4e84811004e065a3bb5ceeb1d9aa592630f9ad"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/finder/zipball/936529dea4ebedcfe577700b6079a75eb918d21f",
-            "reference": "936529dea4ebedcfe577700b6079a75eb918d21f",
+            "url": "https://api.github.com/repos/symfony/finder/zipball/4f4e84811004e065a3bb5ceeb1d9aa592630f9ad",
+            "reference": "4f4e84811004e065a3bb5ceeb1d9aa592630f9ad",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.9"
         },
-        "time": "2017-06-01 20:44:56",
+        "time": "2017-06-01 20:52:29",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "2.7-dev"
+                "dev-master": "2.8-dev"
             }
         },
         "installation-source": "dist",
@@ -4055,88 +4008,36 @@
         "homepage": "https://symfony.com"
     },
     {
-        "name": "illuminate/filesystem",
-        "version": "v5.1.41",
-        "version_normalized": "5.1.41.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/illuminate/filesystem.git",
-            "reference": "f109f5fb12eef0211cdaff226bef51e18ec8c147"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/filesystem/zipball/f109f5fb12eef0211cdaff226bef51e18ec8c147",
-            "reference": "f109f5fb12eef0211cdaff226bef51e18ec8c147",
-            "shasum": ""
-        },
-        "require": {
-            "illuminate/contracts": "5.1.*",
-            "illuminate/support": "5.1.*",
-            "php": ">=5.5.9",
-            "symfony/finder": "2.7.*"
-        },
-        "suggest": {
-            "league/flysystem": "Required to use the Flysystem local and FTP drivers (~1.0).",
-            "league/flysystem-aws-s3-v3": "Required to use the Flysystem S3 driver (~1.0).",
-            "league/flysystem-rackspace": "Required to use the Flysystem Rackspace driver (~1.0)."
-        },
-        "time": "2016-05-28 21:16:16",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "5.1-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Illuminate\\Filesystem\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Taylor Otwell",
-                "email": "taylorotwell@gmail.com"
-            }
-        ],
-        "description": "The Illuminate Filesystem package.",
-        "homepage": "http://laravel.com"
-    },
-    {
         "name": "symfony/debug",
-        "version": "v2.7.29",
-        "version_normalized": "2.7.29.0",
+        "version": "v3.0.9",
+        "version_normalized": "3.0.9.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/debug.git",
-            "reference": "2662c21dea8fb116c46fe1bcf819bc5dd4bc99fd"
+            "reference": "697c527acd9ea1b2d3efac34d9806bf255278b0a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/debug/zipball/2662c21dea8fb116c46fe1bcf819bc5dd4bc99fd",
-            "reference": "2662c21dea8fb116c46fe1bcf819bc5dd4bc99fd",
+            "url": "https://api.github.com/repos/symfony/debug/zipball/697c527acd9ea1b2d3efac34d9806bf255278b0a",
+            "reference": "697c527acd9ea1b2d3efac34d9806bf255278b0a",
             "shasum": ""
         },
         "require": {
-            "php": ">=5.3.9",
+            "php": ">=5.5.9",
             "psr/log": "~1.0"
         },
         "conflict": {
             "symfony/http-kernel": ">=2.3,<2.3.24|~2.4.0|>=2.5,<2.5.9|>=2.6,<2.6.2"
         },
         "require-dev": {
-            "symfony/class-loader": "~2.2",
-            "symfony/http-kernel": "~2.3.24|~2.5.9|^2.6.2"
+            "symfony/class-loader": "~2.8|~3.0",
+            "symfony/http-kernel": "~2.8|~3.0"
         },
-        "time": "2017-06-01 20:44:56",
+        "time": "2016-07-30 07:22:48",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "2.7-dev"
+                "dev-master": "3.0-dev"
             }
         },
         "installation-source": "dist",
@@ -4166,96 +4067,52 @@
         "homepage": "https://symfony.com"
     },
     {
-        "name": "illuminate/view",
-        "version": "v5.1.41",
-        "version_normalized": "5.1.41.0",
+        "name": "phroute/phroute",
+        "version": "v1.4.4",
+        "version_normalized": "1.4.4.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/illuminate/view.git",
-            "reference": "8dc810083f5c0dc889757d62be65a7307d92a30b"
+            "url": "https://github.com/mrjgreen/phroute.git",
+            "reference": "f6326ada0abf11d329ca22a951eb932fe25df53a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/view/zipball/8dc810083f5c0dc889757d62be65a7307d92a30b",
-            "reference": "8dc810083f5c0dc889757d62be65a7307d92a30b",
+            "url": "https://api.github.com/repos/mrjgreen/phroute/zipball/f6326ada0abf11d329ca22a951eb932fe25df53a",
+            "reference": "f6326ada0abf11d329ca22a951eb932fe25df53a",
             "shasum": ""
         },
         "require": {
-            "illuminate/container": "5.1.*",
-            "illuminate/contracts": "5.1.*",
-            "illuminate/events": "5.1.*",
-            "illuminate/filesystem": "5.1.*",
-            "illuminate/support": "5.1.*",
-            "php": ">=5.5.9",
-            "symfony/debug": "2.7.*"
+            "php": ">=5.4.0"
         },
-        "time": "2016-07-18 11:06:23",
+        "require-dev": {
+            "satooshi/php-coveralls": "dev-master"
+        },
+        "time": "2014-12-31 16:13:39",
         "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "5.1-dev"
-            }
-        },
         "installation-source": "dist",
         "autoload": {
-            "psr-4": {
-                "Illuminate\\View\\": ""
+            "psr-0": {
+                "Phroute": "src"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "MIT"
+            "BSD-3-Clause"
         ],
         "authors": [
             {
-                "name": "Taylor Otwell",
-                "email": "taylorotwell@gmail.com"
-            }
-        ],
-        "description": "The Illuminate View package.",
-        "homepage": "http://laravel.com"
-    },
-    {
-        "name": "philo/laravel-blade",
-        "version": "v3.1",
-        "version_normalized": "3.1.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/PhiloNL/Laravel-Blade.git",
-            "reference": "3f0ce2ee198604c53c25188110e6d7b5e887527a"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/PhiloNL/Laravel-Blade/zipball/3f0ce2ee198604c53c25188110e6d7b5e887527a",
-            "reference": "3f0ce2ee198604c53c25188110e6d7b5e887527a",
-            "shasum": ""
-        },
-        "require": {
-            "illuminate/events": "~5",
-            "illuminate/view": "~5"
-        },
-        "time": "2015-12-04 09:42:42",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Philo\\Blade\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
+                "name": "Nikita Popov",
+                "email": "nikic@php.net"
+            },
             {
-                "name": "Philo Hermans",
-                "email": "me@philohermans.com"
+                "name": "Joe Green",
+                "email": "joe.green.0991@gmail.com"
             }
         ],
-        "description": "Use the simple and yet powerful Laravel Blade templating engine as a standalone component.",
+        "description": "Fast request router for PHP",
         "keywords": [
-            "blade",
-            "laravel"
+            "router",
+            "routing"
         ]
     }
 ]

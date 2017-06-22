@@ -101,7 +101,7 @@ input[type="button"]:hover:not(.active) {
       <?php echo Message::showQuestion() ?>
       <?php endif ?>
       <script src="<?php echo baseUrl ?>assets/bower/jquery/dist/jquery.slim.min.js"></script>
-      <script src="<?php echo baseUrl ?>assets/bower/AdminLTE/bootstrap/js/bootstrap.min.js"></script>
+      <script src="<?php echo baseUrl ?>assets/bower/bootstrap/dist/js/bootstrap.min.js"></script>
       <script src="<?php echo baseUrl ?>assets/bower/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
       <script type="text/javascript">
 

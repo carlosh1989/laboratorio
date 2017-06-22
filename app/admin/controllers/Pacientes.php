@@ -3,7 +3,7 @@ namespace App\admin\controllers;
 
 use App\Paciente;
 use App\admin\repositories\PacientesRepository as Repo;
-use Controller,View,Token,Session,Arr,Message,Redirect,Permission;
+use Controller,View,Token,Session,Message,Redirect,Permission;
 
 class Pacientes extends Controller
 {
@@ -52,7 +52,8 @@ class Pacientes extends Controller
     // localhost/proyecto/modulo/principal/ID/edit
     public function edit($id)
     {
-        View::show('edit' , compact('id'));
+        $paciente = Paciente::find($id); 
+        View::show('edit' , compact('id','paciente'));
     }
 
     // localhost/proyecto/modulo/principal/ID/put

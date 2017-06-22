@@ -9,7 +9,7 @@ use System\tools\session\Session;
 
 class BaseController 
 {
-    function __construct()
+    public function __construct()
     {
     	new Eloquent();
     }

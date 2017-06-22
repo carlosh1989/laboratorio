@@ -54,7 +54,7 @@
       <?php echo Message::show() ?>
       <?php endif ?>
       <script src="<?php echo baseUrl ?>assets/bower/jquery/dist/jquery.slim.min.js"></script>
-      <script src="<?php echo baseUrl ?>assets/bower/AdminLTE/bootstrap/js/bootstrap.min.js"></script>
+      <script src="<?php echo baseUrl ?>assets/bower/bootstrap/dist/js/bootstrap.min.js"></script>
       <script src="<?php echo baseUrl ?>assets/bower/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
     </body>
   </html>

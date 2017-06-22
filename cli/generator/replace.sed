@@ -1,4 +1,4 @@
 
 s/${modulo}/admin/
-s/${controller}/Sanguineas/
+s/${controller}/Partidas/
 s/${vista}/show/

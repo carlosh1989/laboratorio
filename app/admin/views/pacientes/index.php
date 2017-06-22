@@ -42,7 +42,6 @@
               <ul class="dropdown-menu">
                 <li><a href="<?php echo $baseUrl ?>admin/pacientes/<?php echo $p->id ?>"> <b class="text-primary">VER DATOS <i class="fa fa-search"></i></b></a></li>
                 <li> <a href="<?php echo $baseUrl ?>admin/pacientes/<?php echo $p->id ?>/edit"> <b class="text-success">EDITAR <i class="fa fa-pencil"></i></b></a></li></a></li>
-                <li><a href="<?php echo $baseUrl ?>admin/pacientes/<?php echo $p->id ?>/delete"><b class="text-danger">ELIMINAR <i class="fa fa-times"></i></b></a></li>
               </ul>
             </div>
           </td>
