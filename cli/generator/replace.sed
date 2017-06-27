@@ -1,4 +1,4 @@
 
 s/${modulo}/admin/
-s/${controller}/Pruebas/
+s/${controller}/Prueba/
 s/${vista}/show/

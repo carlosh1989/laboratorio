@@ -59,7 +59,16 @@ class Pacientes extends Controller
     // localhost/proyecto/modulo/principal/ID/put
     public function update($id)
     {
-        //Actualizar datos con el ID
+        $registro = Repo::update($id,$_POST);
+
+        if ($registro === TRUE) 
+        {
+            Redirect::send('admin/pacientes/','success', 'El paciente se actualizo exitosamente.');
+        } 
+        else 
+        {
+            Redirect::send('admin/pensionados   ','error', $registro);
+        }
     }
 
     // localhost/proyecto/modulo/principal/ID/delete
