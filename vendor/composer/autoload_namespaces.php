@@ -6,6 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'vierbergenlars\\SemVer\\' => array($vendorDir . '/vierbergenlars/php-semver/src'),
+    'vierbergenlars\\LibJs\\' => array($vendorDir . '/vierbergenlars/php-semver/src'),
     'rcastera\\Browser\\Session' => array($vendorDir . '/rcastera/session/src'),
     'phpDocumentor' => array($vendorDir . '/phpdocumentor/reflection/src', $vendorDir . '/phpdocumentor/reflection/tests/unit', $vendorDir . '/phpdocumentor/reflection/tests/mocks', $vendorDir . '/phpdocumentor/graphviz/src', $vendorDir . '/phpdocumentor/graphviz/tests/unit', $vendorDir . '/phpdocumentor/fileset/src', $vendorDir . '/phpdocumentor/fileset/tests/unit', $vendorDir . '/phpdocumentor/phpdocumentor/src', $vendorDir . '/phpdocumentor/phpdocumentor/tests/unit', $vendorDir . '/phpdocumentor/reflection-docblock/src'),
     'Twig_' => array($vendorDir . '/twig/twig/lib'),
@@ -20,6 +22,8 @@ return array(
     'JMS\\' => array($vendorDir . '/jms/parser-lib/src'),
     'Herrera\\Phar\\Update' => array($vendorDir . '/herrera-io/phar-update/src/lib'),
     'Herrera\\Json' => array($vendorDir . '/herrera-io/json/src/lib'),
+    'Guzzle\\Tests' => array($vendorDir . '/guzzle/guzzle/tests'),
+    'Guzzle' => array($vendorDir . '/guzzle/guzzle/src'),
     'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/lib'),
     'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib'),
     'Cilex\\Provider\\Console' => array($vendorDir . '/cilex/console-service-provider/src'),

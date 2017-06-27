@@ -38,6 +38,7 @@ return array(
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'Phinx\\' => array($vendorDir . '/robmorgan/phinx/src/Phinx'),
     'Particle\\Validator\\' => array($vendorDir . '/particle/validator/src'),
+    'PackageVersions\\' => array($vendorDir . '/samsonasik/package-versions/src/PackageVersions'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
     'Migrations\\' => array($baseDir . '/migrations'),
     'JsonSchema\\' => array($vendorDir . '/justinrainbow/json-schema/src/JsonSchema'),
@@ -46,6 +47,7 @@ return array(
     'Illuminate\\Database\\' => array($vendorDir . '/illuminate/database'),
     'Illuminate\\Contracts\\' => array($vendorDir . '/illuminate/contracts'),
     'Illuminate\\Container\\' => array($vendorDir . '/illuminate/container'),
+    'Github\\' => array($vendorDir . '/knplabs/github-api/lib/Github'),
     'Faker\\' => array($vendorDir . '/fzaninotto/faker/src/Faker'),
     'Dotenv\\' => array($vendorDir . '/vlucas/phpdotenv/src'),
     'Doctrine\\Instantiator\\' => array($vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator'),
@@ -53,5 +55,6 @@ return array(
     'DB\\' => array($baseDir . '/db'),
     'Config\\' => array($baseDir . '/config'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
+    'Bowerphp\\' => array($vendorDir . '/beelab/bowerphp/src/Bowerphp'),
     'App\\' => array($baseDir . '/app'),
 );
