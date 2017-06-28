@@ -1,9 +1,10 @@
 #!/bin/bash
-OPTION=$(whiptail --title "HERRAMIENTAS" --menu "" 15 60 4 \
+OPTION=$(whiptail --title "HERRAMIENTAS" --menu "" 15 60 5 \
 "1" "DATABASE" \
 "2" "DEBUG" \
 "3" "GENERATOR" \
-"4" "DOCS" 3>&1 1>&2 2>&3)
+"4" "DOCS" \
+"5" "BOWER" 3>&1 1>&2 2>&3)
 
 exitstatus=$?
 if [ $exitstatus = 0 ]; then
@@ -203,6 +204,17 @@ if [ $exitstatus = 0 ]; then
 	if [[ $OPTION = 4 ]]; then
 		./cli/cli.sh documentar
 	fi
+
+	if [[ $OPTION = 5 ]]; then
+		LIBRERIABOWER=$(whiptail --title "BOWER ( Gestor de paquetes estaticos )" --inputbox "Ingrese nombre de paqute o url" 10 60 3>&1 1>&2 2>&3)
+		exitstatus=$?
+		if [ $exitstatus = 0 ]; then
+			./vendor/bin/bowerphp install $LIBRERIABOWER --save
+		else
+		    echo "Cerrado";
+		fi
+	fi
+
 else
     echo "Cerrado";
 fi
