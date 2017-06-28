@@ -1,5 +1,4 @@
 <?php
-
 use System\tools\session\Session;
 // Dividimos la URL.
 require_once __DIR__ . '/vendor/autoload.php';
