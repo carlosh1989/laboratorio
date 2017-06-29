@@ -206,15 +206,33 @@ if [ $exitstatus = 0 ]; then
 	fi
 
 	if [[ $OPTION = 5 ]]; then
-		LIBRERIABOWER=$(whiptail --title "BOWER ( Gestor de paquetes estaticos )" --inputbox "Ingrese nombre de paqute o url" 10 60 3>&1 1>&2 2>&3)
+		BOWER=$(whiptail --title "BOWER" --menu "" 15 60 4 \
+		"1" "INSTALL JSON" \
+		"2" "INSTALL LIBRARY/URL" 3>&1 1>&2 2>&3) 
+
 		exitstatus=$?
 		if [ $exitstatus = 0 ]; then
-			./vendor/bin/bowerphp install $LIBRERIABOWER --save
+		    if [[ $BOWER = 1 ]]; then
+		    	./vendor/bin/bowerphp install
+		    fi
+
+		    if [[ $BOWER = 2 ]]; then
+				BOWERLIBRARY=$(whiptail --title "BOWER" --inputbox "Ingrese paquete o url" 10 60 3>&1 1>&2 2>&3)
+				exitstatus=$?
+				if [ $exitstatus = 0 ]; then
+					if [[ $BOWERLIBRARY ]]; then
+						./vendor/bin/bowerphp install $BOWERLIBRARY --save
+					else
+						echo "Error, debe ingresar nombre de paquete o url";
+					fi
+				else
+				    echo "Cerrado";
+				fi
+		    fi
 		else
 		    echo "Cerrado";
 		fi
 	fi
-
 else
     echo "Cerrado";
 fi
